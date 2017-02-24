@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_synthesizer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.chadalavada55579.synthesizer.SynthesizerActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!" />
+
+    <Button
+        android:text="First Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button1"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_marginTop="33dp"
+        android:onClick="onButton1Click" />
+
+    <Button
+        android:text="Second Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Button1"
+        android:layout_alignParentStart="true"
+        android:id="@+id/Button2"
+        android:onClick="onButton2Click" />
+<!--
+    <Button
+        android:text="Array thing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mChallenge5"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="32dp"
+        android:id="@+id/mChallenge3" />
+
+    <Button
+        android:text="Twinkle Twinkle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:id="@+id/mChallenge5"
+        android:layout_below="@+id/mChallenge1"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="first challenge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mChallenge1"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+        -->
+
+    <Button
+        android:text="Third Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Button3"
+        android:layout_below="@+id/Button2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:onClick="onButton3Click" />
+
+    <Button
+        android:text="Loop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:id="@+id/Loop"
+        android:layout_below="@+id/Record"
+        android:layout_alignEnd="@+id/Button1"
+        android:layout_marginEnd="12dp"
+        android:onClick="onLoopClick" />
+
+    <Button
+        android:text="Record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="58dp"
+        android:id="@+id/Record"
+        android:onClick="onRecordClick"
+        android:layout_below="@+id/Button3"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
