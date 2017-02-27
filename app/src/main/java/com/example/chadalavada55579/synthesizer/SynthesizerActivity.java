@@ -31,7 +31,8 @@ public class SynthesizerActivity extends AppCompatActivity {
     private Boolean record = false;
     private Button Record;
     private Button Loop;
-    private ArrayList<MediaPlayer> beat;
+    private ArrayList<MediaPlayer> beat = new ArrayList<MediaPlayer>();
+    private Button PlayLoop;
 
 
     @Override
@@ -52,7 +53,7 @@ public class SynthesizerActivity extends AppCompatActivity {
         mpF = MediaPlayer.create(this, R.raw.scalef);
         mpFs = MediaPlayer.create(this, R.raw.scalefs);
         mpG = MediaPlayer.create(this, R.raw.scaleg);
-        ArrayList<MediaPlayer> beat = new ArrayList<MediaPlayer>();
+
 
 
     }
@@ -70,6 +71,7 @@ public class SynthesizerActivity extends AppCompatActivity {
             Log.i(TAG , "Button 1 clicked");
             mpE.start();
             beat.add(mpE);
+
         }
         else {
             mpE.seekTo(0);
@@ -117,20 +119,31 @@ public void onRecordClick(View v) {
 }
 
 public void onLoopClick (View v) {
-    if (loop == true) {
-        loop = false;
-    }
-    else {
+    if (loop == false) {
         loop = true;
     }
-    while (loop == true){
-      for (int i = 0; i < beat.size(); i++){
+    else {
+        loop = false;
+    }
+    while (loop == true) {
+        for (int i = 0; i < beat.size(); i++) {
             beat.get(i).seekTo(0);
             Log.i("SynthesizerActivity", "Button 3 clicked");
-            beat.get(i).start();
-        }
+            try {
+                beat.get(i).start();
+                delayPlaying(WHOLE_NOTE);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
     }
+
+
+
+        }
+        }
 }
+
+
 
 
 
@@ -194,10 +207,10 @@ public void onLoopClick (View v) {
         catch (InterruptedException e) {
             e.printStackTrace();
         }
-        **/
+
 
     }
-
+        **/
 
 
 
